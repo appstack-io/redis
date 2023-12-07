@@ -32,9 +32,7 @@ jobs:
           scope: '@appstack-io'
 
       - name: Configure NPM
-        run: |
-          npm config set "//npm.pkg.github.com/:_authToken" "${{ secrets.GITHUB_TOKEN }}"
-          npm config set "@appstack-io:registry" "https://npm.pkg.github.com/"
+        run: echo "APPSTACKIO_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
 
       - name: Install Dependencies
         run: npm ci
