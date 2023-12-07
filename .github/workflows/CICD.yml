@@ -47,11 +47,6 @@ jobs:
           git-user: 'Cog Bot'
           git-user-email: 'cogbot@appstack-io'
 
-      - name: Create .npmrc file
-        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > .npmrc
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Update package.json version
         run: node update-version.js
 
