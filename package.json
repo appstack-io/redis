@@ -1,8 +1,7 @@
 {
   "name": "@appstack-io/redis",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "",
-  "author": "",
   "author": {
     "name": "Or Gal",
     "email": "orrgal@gmail.com"
